@@ -23,9 +23,11 @@
 	<link rel='stylesheet' id='skin-css'  href='css/style2.css' type='text/css' media='all' />
 	
 	<link rel='stylesheet' id='mytheme-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' type='text/css' media='all' />
+	
 
 </head>
 <body class="home page-template page-template-tpl-fullwidth page-template-tpl-fullwidth-php page page-id-1026" style="Montserrat-Light, Helvetica Neue, Helvetica, Arial, sans-serif">
+
 <!-- ** Wrapper ** -->
   <div class="wrapper">
   <!-- Header Section -->
@@ -38,7 +40,7 @@
 				<!-- ** Logo ** -->
 				<div id="logo">
 							<!-- <img class="normal_logo" src="images/w-logo01.png" width="190" height="25" alt="BMTECH" title="BMTECH"/> -->
-		          <img class="retina_logo" src="images/w-logo01.png" alt="Bmtech" title="Bmtech" style="width:227px; height:47px;"/>
+		          <img class="retina_logo" src="images/tetrawing_white.gif" alt="Bmtech" title="Bmtech" style="width:227px; height:47px;"/>
 				</div>
 		    <!-- ** Logo Ends ** -->
 		
@@ -66,7 +68,7 @@
   <div class="dt-sc-clear"></div>
   
   <div  class='column dt-sc-one-third   first'  > 
-    <a href="http://34.198.196.34:8001/" > 
+    <a id="kong-proxy" href="#" > 
 		<div class='dt-sc-ico-content  type3'>
 		<div class='icon'><span><img src='images/secure-colored.png'/></span></div>
 		 <h3>TetraWing Proxy</h3>
@@ -75,7 +77,7 @@
   </div>
 
   <div  class='column dt-sc-one-third'>
-  <a href="http://34.198.196.34:1337/" >
+  <a id="konga" href="#" >
 		<div class='dt-sc-ico-content  type3'>
 		<div class='icon'>
 		<span><img src='images/db-share-colored.png'/></span></div><h3>TetraWing API Supervision</h3>
@@ -84,7 +86,7 @@
   </div>
       
   <div  class='column dt-sc-one-third'>
-  <a href="http://34.198.196.34:3000/" >
+  <a id="grafana" href="#" >
 		<div class='dt-sc-ico-content  type3'>
 		<div class='icon'>
 		<span><img src='images/db-storage-colored.png'/></span></div><h3>TetraWing Insights</h3>
@@ -93,7 +95,7 @@
   </div>
 
   <div  class='column dt-sc-one-third   first'  >
-  <a href="http://34.198.196.34:9000/" >
+  <a id="portainer" href="#" >
 	  <div class='dt-sc-ico-content  type3'>
 	  <div class='icon'>
 	    <span><img src='images/cpu-colored.png'/></span>
@@ -103,17 +105,8 @@
 	  </a>
   </div>
 
- <!--  <div  class='column dt-sc-one-third'>
-  <a href="#" >
-    <div class='dt-sc-ico-content  type3'>
-    <div class='icon'><span>
-    <img src='images/server-colored.png'/></span></div><h3> </h3>
-    </div>
-    </a>
-  </div> -->
-
   <div  class='column dt-sc-one-third'>
-  <a href="http://34.198.196.34:9000/" >
+  <a id="wazuh" href="http://34.198.196.34:9000/" >
 		<div class='dt-sc-ico-content  type3'>
 		<div class='icon'>
 		<span><img src='images/sec-shield-colored.png'/></span>
@@ -139,7 +132,7 @@
                 
 <div class="float-right">
 
-<h4 class='right'><span>Micro Services Ready Hardware Solutions</span> </h4> 
+<h4 class='right'><span>Micro Services Ready Solutions</span> </h4> 
 
 </div>                
 </div>        
@@ -158,5 +151,14 @@
     </div><!-- ** copyright Ends ** -->        
   </footer><!-- ** Footer Ends ** -->
 </div><!-- ** Wrapper End ** -->
+<script>
+	var ip = location.host;
+   	console.log("IP : ",ip);
+    document.getElementById("kong-proxy").href=ip+":8001";
+    document.getElementById("konga").href=ip+":1337";
+    document.getElementById("grafana").href=ip+":3000"; 
+    document.getElementById("portainer").href=ip+":9000";
+    document.getElementById("wazuh").href=ip+":9001";
+</script>
 </body>
 </html>
