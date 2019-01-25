@@ -154,11 +154,11 @@
 <script>
 	var ip = location.hostname;
    	console.log("IP : ",ip);
-    document.getElementById("kong-proxy").href=ip+":8001";
-    document.getElementById("konga").href=ip+":1337";
-    document.getElementById("grafana").href=ip+":3000"; 
-    document.getElementById("portainer").href=ip+":9000";
-    document.getElementById("wazuh").href=ip+":9001";
+    document.getElementById("kong-proxy").href="http://"+ip+":8001";
+    document.getElementById("konga").href="http://"+ip+":1337";
+    document.getElementById("grafana").href="http://"+ip+":3000"; 
+    document.getElementById("portainer").href="http://"+ip+":9000";
+    document.getElementById("wazuh").href="http://"+ip+":9001";
 </script>
 </body>
 </html>
